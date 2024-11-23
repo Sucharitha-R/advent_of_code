@@ -33,6 +33,7 @@ public class day6 {
                 System.out.println("Day: " + day);
                 long to_spawn = fishy_census.get(0);
                 // System.out.println("today will be spawned: " + to_spawn);
+
                 for (int i = 0; i < 9; i ++) {
                     if (i == 6) {
                         fishy_census.put(i, to_spawn + fishy_census.get(i+1));
@@ -46,7 +47,7 @@ public class day6 {
             }
 
             // Calculate result
-            int result = 0;
+            long result = 0;
             for (int i = 0; i < 9; i ++) {
                 result += fishy_census.get(i);
             }
